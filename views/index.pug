@@ -4,4 +4,21 @@ html(lang="en")
     title Eventstr
   body
     h1 Eventstr
+    table
+      tr
+        th Title
+        th Start date
+        th End date
+        th Location
+        th Agenda
+        th Address
+      each evt in events
+        tr
+          td= evt.title
+          td= evt.startDate
+          td= evt.endDate
+          td= evt.location
+          td= evt.agenda
+          td= evt.address
+
     include includes/new-event-form

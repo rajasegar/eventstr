@@ -1,0 +1,21 @@
+form(action="/events/new", method="POST")
+  p
+    label Title
+    input(type="text", name="title")
+  p
+    label Start date
+    input(type="date",name="startDate")
+  p
+    label End date
+    input(type="date",name="endDate")
+  p
+    label Location
+    input(type="text",name="location")
+  p
+    label Agenda
+    textarea(name="agenda", rows="5")
+  p
+    label Adress
+    textarea(name="address", rows="5")
+  p
+    button(type="submit") Create Event
