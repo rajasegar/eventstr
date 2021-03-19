@@ -10,7 +10,8 @@ const eventSchema = new Schema({
   agenda: String,
   address: String,
   createdAt: Date,
-  updatedAt: Date
+  updatedAt: Date,
+  tags: [{ name: String}]
 });
 
 const Event = mongoose.model('Event', eventSchema);

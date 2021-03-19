@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', async (req, res) => {
   const events = await Event.find({});
-
   res.render('index', { events });
 });
 
@@ -25,6 +24,10 @@ app.post('/events/new', async (req, res) => {
   res.redirect('/');
 });
 
+
+app.get('/events/new', async (req, res) => {
+  res.render('new-event');
+});
 
 app.listen(3000);
 console.log('Eventstr server listening on port: ' + 3000);

@@ -1,24 +1,13 @@
-doctype html
-html(lang="en")
-  head
-    title Eventstr
-  body
-    h1 Eventstr
-    table
-      tr
-        th Title
-        th Start date
-        th End date
-        th Location
-        th Agenda
-        th Address
-      each evt in events
-        tr
-          td= evt.title
-          td= evt.startDate
-          td= evt.endDate
-          td= evt.location
-          td= evt.agenda
-          td= evt.address
+extends layout
+block body
+  h2 Recently created events
+  .row
+    each evt in events
+      .col-sm-3
+        .card
+          .card-body
+            h5.card-title #{evt.title}
+            p.card-text #{evt.agenda}
+            p.card-text From #{evt.startDate} To #{evt.endDate}
+            a.btn.btn-primary(href="#") Show Details
 
-    include includes/new-event-form

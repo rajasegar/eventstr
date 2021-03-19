@@ -1,21 +1,26 @@
 form(action="/events/new", method="POST")
-  p
-    label Title
-    input(type="text", name="title")
-  p
-    label Start date
-    input(type="date",name="startDate")
-  p
-    label End date
-    input(type="date",name="endDate")
-  p
-    label Location
-    input(type="text",name="location")
-  p
-    label Agenda
-    textarea(name="agenda", rows="5")
-  p
-    label Adress
-    textarea(name="address", rows="5")
-  p
-    button(type="submit") Create Event
+  .mb-3.row
+    label.col-sm-2.col-form-label Title
+    .col-sm-10
+      input.form-control(type="text", name="title")
+  .mb-3.row
+    label.col-sm-2.col-form-label Start date
+    .col-sm-10
+      input.form-control(type="date",name="startDate")
+  .mb-3.row
+    label.col-sm-2.col-form-label End date
+    .col-sm-10
+      input.form-control(type="date",name="endDate")
+  .mb-3.row
+    label.col-sm-2.col-form-label Location
+    .col-sm-10
+      input.form-control(type="text",name="location")
+  .mb-3.row
+    label.col-sm-2.col-form-label Agenda
+    .col-sm-10
+      textarea.form-control(name="agenda", rows="5")
+  .mb-3.row
+    label.col-sm-2.col-form-label Adress
+    .col-sm-10
+      textarea.form-control(name="address", rows="5")
+  button.btn.btn-primary(type="submit") Create Event
